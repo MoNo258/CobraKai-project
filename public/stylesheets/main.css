@@ -1,0 +1,72 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#copyright {
+    position: fixed;
+    bottom: 0;
+}
+
+.jumbotron#jumbotron {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxPDjh80umm8xXQE6ywyqziNv_4wWkO9PbJLoK6e_asiVM4ik4mg");
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd7m_Vh08UP3f7twFcYXN8KrT09n1D5zjTRU-6-smW1odUa7Pq"); */
+    /* background-image: url("../../Cobra_Kai_motto.jpg"); */
+    background-size: contain ; 
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 10em;
+}
+
+
+
+body {
+    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwdnm4RAhnbZEUrm3IPlUjH7bShIwj9kX57UVoy_M1jrsvjktXQ); */
+    background: rgb(213,58,20);
+    background: linear-gradient(90deg, rgba(213,58,20,1) 0%, rgba(255,204,94,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: cover;
+    background-position: center;
+    padding-top: 65px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#button_new {
+    text-align: center;
+    font-size: 1em;
+    width: 10em;
+    display: block;
+	margin: auto;
+}
+
+/*image next to the Brand's name - size & position (being next to and not above or below)*/
+.navbar-brand>img {
+	height: 20px;
+	width: 20px;
+	float: left;
+   	margin-right: 3px;
+}
+
+.navbar-right>li {
+  color: #f2f2f2;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.50);
+    transition: background 500ms;
+    /* color: black; */
+}
+
+
+

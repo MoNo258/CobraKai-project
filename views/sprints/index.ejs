@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+ <div class="container">
+     <header>
+        <% if(!currentUser){ %>
+            <div id="jumbotron" class="jumbotron">
+
+            </div>
+        <% } else { %>
+            <div id="jumbotron" class="jumbotron">
+
+            </div>
+            <div id="jumbotron_admin" class="jumbotron">
+                <a id="button_new" class="btn btn-default btn-large" href="/sprints/new">Add New sprint</a>
+            </div>
+        <% } %>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% sprints.forEach(function(sprint){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= sprint.image %>">
+                   <div class="caption">
+                       <h4><%= sprint.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/sprints/<%= sprint._id %>" class="btn btn-default">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

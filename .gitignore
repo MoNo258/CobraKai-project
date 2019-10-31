@@ -1,0 +1,10 @@
+/node_modules
+
+package-lock.json
+
+Cobra_Kai_motto.jpg
+Cobra_Kai.png
+images.jpg
+notes.txt
+
+/public/scripts/navbar-scrolled.js

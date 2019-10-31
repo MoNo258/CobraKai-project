@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-1">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= sprint.image %>">
+                <div class="caption-full">
+                    <h4><a><%=sprint.name%></a></h4>
+                    <p><%= sprint.description %></p>
+                    <p>
+                        <em>Submitted By <%= sprint.author.username %></em>
+                    </p>
+                    <% if(currentUser && sprint.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-warning" href="/sprints/<%=sprint._id%>/edit">Edit sprint</a>
+                        <form style="display: inline" id="delete" action="/sprints/<%= sprint._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/sprints/<%= sprint._id %>/comments/new">Add Comment</a>
+                </div>
+                <hr>
+                <% sprint.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %> 
+                            <div style="border: 1px dashed; padding: 10px 10px;" class="col-md-12">    
+                                <p>
+                                    <%= comment.text %> 
+                                </p>    
+                                <a class="btn btn-warning" 
+                                href="/sprints/<%= sprint._id %>/comments/<%= comment._id%>/edit">Edit comment
+                                </a>
+                                <form style="display: inline" id="delete" action="/sprints/<%= sprint._id %>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </div>
+                        <% } %>
+                    </div>
+                <% }) %>
+            </div>
+            <a class="btn btn-default" href="/sprints">GO back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
