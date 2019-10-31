@@ -21,6 +21,8 @@ var indexRoutes = require("./routes/index"),
     sprintRoutes = require("./routes/sprints"),
     commentRoutes = require("./routes/comments");
 
+// mongoose.connect("mongodb+srv://MonikaAdmin:monikaadmin@clustercobrakai-o6st9.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
+
 mongoose.connect(url, 
     {
         useNewUrlParser: true,
